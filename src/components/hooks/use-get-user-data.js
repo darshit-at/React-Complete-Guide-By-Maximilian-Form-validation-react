@@ -24,20 +24,20 @@ const useUserInputData = (responeFunction) => {
     
         if (
             userEmail.trim().length === 0 ||
-            userFirstName.trim().length === 0 ||
+            userFirstName==='' ||
             userLastName.trim().length === 0) {
-        respone = 'please fill the field'
+            respone = 'please fill the field'
 
         }
 
-       if(isNaN(userFirstName) || isNaN(userLastName)) {
- respone ='Enter vaild name'
- 
+     else  if(isNaN(userFirstName) || isNaN(userLastName)) {
+       respone ='Enter vaild name'
+     
         }
       
-        if (findIndex === -1 || nextChar !== 'g') {
+      else  if (findIndex === -1 || nextChar !== 'g') {
             respone ='please Enter valid email'
-   
+    
         }
      else {
         respone = `Thank  you for your respone ${userFirstName} ${userLastName}`
