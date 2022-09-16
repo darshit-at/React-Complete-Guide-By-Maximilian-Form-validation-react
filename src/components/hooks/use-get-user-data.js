@@ -30,7 +30,7 @@ const useUserInputData = (responeFunction) => {
 
         }
 
-     else  if(isNaN(userFirstName) || isNaN(userLastName)) {
+     else  if(!isNaN(userFirstName) || !isNaN(userLastName)) {
        respone ='Enter vaild name'
      
         }
